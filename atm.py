@@ -16,9 +16,13 @@ while True:
         deposit_amount = int(input('입금할 금액을 입력해주세요 : '))
         balance += deposit_amount
         print(f'입금하신 금액은 {deposit_amount}원이고, 현재 잔액은 {balance}원 입니다.')
-        pass
+
     if num == '2':
-        pass
+        withdraw_amount = int(input('출금할 금액을 입력해주세요 : '))
+        withdraw_amount = min(balance, withdraw_amount)
+        balance -= withdraw_amount
+        print(f'출금금하신 금액은 {withdraw_amount}원이고, 현재 잔액은 {balance}원 입니다.')
+
     if num == '3':
         pass
 
