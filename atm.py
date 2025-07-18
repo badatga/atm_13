@@ -26,7 +26,12 @@ while True:
         receipts.append(('출금', deposit_amount, balance))
 
     if num == '3':
-        print(receipts)
-        pass
+        if receipts:
+            for i in receipts:
+                print(f"{i[0]}: {i[1]}원 | 잔액: {i[2]}")
+            # print(receipts)
+        else:
+            print('영수증 내역이 없습니다.')
+        
 
 print(f'서비스를 종료합니다. 현재 잔액은 {balance}원 입니다')
